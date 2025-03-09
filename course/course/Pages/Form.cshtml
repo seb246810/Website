@@ -1,0 +1,68 @@
+﻿
+@page
+
+
+
+@model course.Pages.Index2Model
+
+@section scripts{
+   <partial name ="_ValidationScriptsPartial" />
+}
+
+
+
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script defer src="/Form/form.js"></script>
+    <link rel="stylesheet" href="/Form/form.css">
+</head>
+    <body>
+
+
+   
+
+
+
+
+    <section class="maincontent">
+        <div id="error"></div>
+        <h3>@ViewData["customessage"]</h3>
+        <form class="form"  method="post">
+            <div>
+
+               
+               <label asp-for="username"></label>
+                
+               <input asp-for="username" />
+            </div>
+        
+            <div>
+                <label asp-for="Email"></label>
+                <input asp-for="Email" />
+            </div>
+
+            
+
+            <button>Submit</button>
+
+            <span asp-validation-for="username"></span>
+            <span asp-validation-for="Email"></span>
+            
+        </form>
+       
+        
+
+        
+    </section>
+
+   
+</body>
+
+
+ 
+</html>

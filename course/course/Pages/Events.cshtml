@@ -1,0 +1,58 @@
+﻿@page
+@model course.Pages.Events
+@{
+}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Events/events.css">
+    <script defer src="/Events/events.js"></script>
+    <title>Events</title>
+
+</head>
+<body>
+<section class="maincontent">
+
+
+    <section class="intro">
+        <p>Welcome to events this page is to show you the events that are available to you in your local area and also to show you why you should take place in a marathon with an inspirational video below.</p>
+        <p>A list of areas in Nottingham where marathons are happening:</p>
+        <ul>
+            <li>Radford, 20/7/2023</li>
+            <li>The Embankment, 29/8/2023</li>
+            <li>Forest fields, 15/9/2023</li>
+            <li>Ruddington, 1/10/2023</li>
+        </ul>
+    </section>
+
+
+
+
+
+    <div class="buttons">
+        <button onclick="pauseplay()">play/pause</button>
+        <button onclick="increase()">Large</button>
+        <button onclick="decrease()">small</button>
+        <button onclick="reset()">Normal</button>
+    </div>
+
+    <div class="videocontent">
+
+        <video id="mainvid" width="320" height="240">
+            <source src="/Events/Marathon Man - Clip.mp4" type="video/mp4">
+
+
+        </video>
+    </div>
+
+
+
+
+
+</section>
+        
+    </body>
+
+</html>

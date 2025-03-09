@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script defer src = "form.js"></script>
+    <link rel = "stylesheet" href="form.css">
+</head>
+<body>
+   
+    <header>
+        <div class = "welcome">
+            <h4 id ="change">Welcome</h4>
+        </div>
+        <div class="customize">
+            <a id = "font-inc" href  = "#"><div class = "setcustom">A<sup>+</sup></div></a>
+            <a id = "font-reset" href = "#"><div class = "setcustom">A</div></a>
+            <a  id = "font-dec" href ="#"><div class = "setcustom">A<sup>-</sup></div></a>
+            <a id = "white" href="#"><div class = "whitebackground">&#9632;</div></a>
+           
+            <a id ="reset" href="#"><div class = "resetcolor">&#9632;</div></a>
+
+            
+            
+        </div>
+          
+       
+        <div id ="navbar">
+            
+        <div class = "topnav" >
+            
+            <a class = "active" href= "/Index/index.html">Home</a>
+            <a href = "/Products/products.html">Products</a>
+            <a href = "/Form/Form.html">Register</a>
+            <a href ="/Events/events.html" >Events</a>
+            <a href = "/Meals/meals.html">Healthy Meals</a>
+        
+        </div>
+        </div>
+        <img class = "homeimg" src = "/Images/homepic.webp" alt="man running">
+    
+        <div class = "topleft"><h1 class = "h1" id ="heading">HealthyNotts by Sebastian Hofton</h1></div>
+    </header>
+    
+    
+    
+    
+    
+    
+    
+    <section class = "maincontent">
+    <div id = "error"></div>
+    <form class="form" id = "form" action = "/" method = "GET">
+        <div> 
+        <label for = "Username">Username</label>
+        <input id = "Username" name = "username" type = "text">
+        </div>
+        <div>
+        <label for = "Password">Password</label>
+        <input id = "Password" name = "Password" type = "password">
+    </div>
+    <div>
+        <label for = "Email">Email Add</label>
+        <input id = "Email" name = "Email" type = "text">
+    </div>
+
+    <div>
+        <label for = "contactdetails">contact details</label>
+        <input id = "contact" name = "contactdetails" type = "number">
+    </div>
+
+    <button type = "submit">Submit</button>
+    </form>
+    <div id = "return"></div>
+
+    <p id = "comfirm"></p>
+</section>
+</body>
+<footer>
+    <h2>Contact details</h2>
+    <hr>
+    <p>Name: Sebastian Hofton</p>
+    <p>Phone Number:+44 011177788</p>
+    <p>Email Address: Sebastian.Hofton@gmail.com</p>
+</footer>
+</html>

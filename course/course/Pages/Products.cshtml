@@ -1,0 +1,78 @@
+﻿@page
+
+@model course.Pages.ProductsModel
+@{
+   
+   
+}
+
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Products/products.css?v=2" />
+    <script defer src="/Products/products.js?v=2"></script>
+    <title>Products</title>
+</head>
+<body>
+   
+     
+      
+
+    <section class="maincontent">
+
+
+        <section class="intro">
+            <p>Welcome to the products page here we will show you what we have to offer for you to help you on your journey to becoming fitter. There is helpful resources below that you can view and read to see which ones you would like to invest into.</p>
+        </section>
+
+
+
+       
+                    
+
+           
+           
+                 <div class="flex-container">
+
+
+                @foreach (var product in @Model.Products){
+                <div>
+                    
+                    
+                    <p>Product name: @product.Name</p>
+                    <img  class="energybar" class ="" id="prod" src="@Url.Content(product.ProductImage)" alt="@product.ProductAlt " >
+                    
+                    
+                    <p>Description:@product.Description</p>
+                    <p> Price £@product.Price</p>
+
+                        <a  asp-page="/Update"
+                       asp-route-id="@product.Id">Update</a>
+
+
+                    <a class="update" asp-page="/Products" asp-route-id="@product.Id" asp-page-handler="Delete">Delete</a>
+                    
+                </div>
+        
+                }
+             
+                
+                
+            </div>
+
+            
+        
+                
+            
+
+  
+
+    </section>
+         
+</body>
+
+</html>
+            

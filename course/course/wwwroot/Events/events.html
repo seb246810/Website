@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel = "stylesheet" href="events.css">
+            <script defer src = "events.js"></script>
+            <title>Events</title>
+
+    </head>
+    <body>
+        <header>
+            <div class = "welcome">
+                <h4 id ="change">Welcome</h4>
+            </div>
+            
+            <div class="customize">
+                <a id = "font-inc" href  = "#"><div class = "setcustom">A<sup>+</sup></div></a>
+                <a id = "font-reset" href = "#"><div class = "setcustom">A</div></a>
+                <a  id = "font-dec" href ="#"><div class = "setcustom">A<sup>-</sup></div></a>
+                <a id = "white" href="#"><div class = "whitebackground">&#9632;</div></a>
+               
+                <a id ="reset" href="#"><div class = "resetcolor">&#9632;</div></a>
+
+                
+                
+            </div>
+
+                <div id ="navbar">
+                
+                    <div class = "topnav" >
+                        
+                <a class = "active" href= "/Index/index.html">Home</a>
+                <a href = "/Products/products.html">Products</a>
+                <a href = "/Form/Form.html">Register</a>
+                <a href ="/Events/events.html" >Events</a>
+                <a href = "/Meals/meals.html">Healthy Meals</a>
+                    
+                    </div>
+                    </div>
+                    <img class = "homeimg" src = "homepic.webp" alt="man running">
+                
+                    <div class = "topleft"><h1 class = "h1" id ="heading">HealthyNotts by Sebastian Hofton</h1></div>
+
+                
+                
+            </div>
+            
+        </header>
+
+        <section class = "maincontent">
+        
+           
+            <section class = "intro">
+                <p>Welcome to events this page is to show you the events that are available to you in your local area and also to show you why you should take place in a marathon with an inspirational video below.</p>
+                <p>A list of areas in Nottingham where marathons are happening:</p>
+                            <ul>
+                                <li>Radford, 20/7/2023</li>
+                                <li>The Embankment, 29/8/2023</li>
+                                <li>Forest fields, 15/9/2023</li>
+                                <li>Ruddington, 1/10/2023</li>
+                            </ul>
+            </section>
+        
+        
+
+        
+        
+            <div class = "buttons">
+                <button onclick="pauseplay()">play/pause</button> 
+                <button onclick="increase()">Large</button>
+                <button onclick="decrease()">small</button>
+                <button onclick="reset()">Normal</button>
+            </div>
+
+                <div class="videocontent" >
+                  
+                    <video id = "mainvid" width="320" height="240">
+                        <source  src="Marathon Man - Clip.mp4" type="video/mp4">
+                        
+                        
+                      </video>
+                    </div>
+
+                      
+
+                    
+
+        </section>
+        </section>
+    </body>
+    <footer>
+        <h2>Contact details</h2>
+        <hr>
+        <p>Name: Sebastian Hofton</p>
+        <p>Phone Number:+44 011177788</p>
+        <p>Email Address: Sebastian.Hofton@gmail.com</p>
+    </footer>
+
+    
+</html>

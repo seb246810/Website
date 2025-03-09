@@ -1,0 +1,41 @@
+﻿@page
+@model course.Pages.Enterdata
+
+
+
+
+<html>
+    <body>
+    <form method="post" asp-page="Enterdata" style="margin-left:40%">
+        <div>
+        <label asp-for="@Model.Products.Id"></label>
+        <input type="text" asp-for="@Model.Products.Id" style="margin-left:4%" readonly="readonly"  />
+         </div>
+
+         <div style="margin-top:2%">
+        <label asp-for = "@Model.Products.Name"></label>
+            <input type="text" asp-for="@Model.Products.Name" style="margin-left:2%" />
+        </div>
+
+        <div style="margin-top:2%">
+        <label asp-for = "@Model.Products.Description"></label>
+            <input type="text" asp-for="@Model.Products.Description" style="margin-right:3%" />
+        </div>
+
+        <div style="margin-top:2%">
+        <label asp-for="@Model.Products.ProductImage"></label>
+            <input type="text" asp-for="@Model.Products.ProductImage" style="display:inline-block" />
+        </div>
+        <div style="margin-top:2%">
+        <label asp-for="@Model.Products.ProductAlt"></label>
+            <input type="text" asp-for="@Model.Products.ProductAlt" style="display:inline-block" />
+        </div>
+        <div style="margin-top:2%">
+        <label asp-for="@Model.Products.Price" style="margin:left:4%"></label>
+            <input type="text" asp-for="@Model.Products.Price" style="display:inline-block" />
+        </div>
+        
+        <input type="submit" value="Save" />
+    </form>
+    </body>
+</html>

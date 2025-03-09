@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="/Index/file.css">
+   
+    
+   
+</head>
+<body>
+    
+   
+    @{
+       
+        var txt = "";
+        var Time = DateTime.Now.Hour;
+
+        if (Time > 12 && Time < 18)
+        {
+            txt = "Good Afternoon";
+        }
+
+        else if (Time >= 18 && Time < 12)
+        {
+            txt = "Good evening";
+        }
+
+        else
+        {
+            txt = "Good morning";
+        }
+    }
+
+    <header>
+        
+        
+         
+    
+
+        <div class="welcome">
+            <h4 id="change">@txt Welcome to my E-comerce System  </h4>
+        </div>
+
+        <div class="customize">
+            <a id="font-inc" href="#"><div class="setcustom">A<sup>+</sup></div></a>
+            <a id="font-reset" href="#"><div class="setcustom">A</div></a>
+            <a id="font-dec" href="#"><div class="setcustom">A<sup>-</sup></div></a>
+            <a id="white" href="#"><div class="whitebackground">&#9632;</div></a>
+
+            <a id="reset" href="#"><div class="resetcolor">&#9632;</div></a>
+
+
+
+        </div>
+
+        <div id="navbar">
+            <div class="topnav">
+                <a class="active" href="/Index">Home</a>
+                <a href="/Products">Products</a>
+                
+                <a href = "/Enterdata">Add product</a>
+                <a href ="/ManageUser">Admin dasboard</a>
+                <a href="/Events">Events</a>
+                <a href="/Meals">Healthy Meals</a>
+
+                <partial name="_LoginPartial" />
+                
+            </div>
+
+            
+
+        </div>
+
+       
+
+
+
+        <img class="homeimg" src="/Index/homepic.webp" alt="man running">
+        <div class="topleft"><h1 id="heading">HealthyNotts by Sebastian Hofton</h1></div>
+
+
+
+
+
+
+
+
+
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        <h2>Contact details</h2>
+        <hr>
+        <p>Name: Sebastian Hofton</p>
+        <p>Phone Number:+44 011177788</p>
+        <p>Email Address: Sebastian.Hofton@gmail.com</p>
+        <p>&copy; Copyright @DateTime.Now.Year</p>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+   @await RenderSectionAsync("Scripts", required:false)
+</body>
+</html>

@@ -1,0 +1,71 @@
+﻿@page
+@model course.Pages.ManageUser
+@{
+}
+
+<html>
+    <body>
+        <table class="table" style="margin-left:25%">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th style="margin-left:5%","margin-right:5%">User Roles </th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach(var role in Model.roles)
+            {
+                <tr>
+                    <td>@role.Id</td>
+                    
+                    <td>@role.Name</td>
+                    <td><a class="btn btm-sm btn-danger order-button float-right" asp-page = "/ManageUser"
+                        asp-route-id ="@role.Id" asp-page-handler="Delete">Delete Role</a></td>
+                   
+                </tr>
+            }
+           <td> <form method="post" asp-page="/ManageUser" asp-page-handler="Add">
+
+                <input type="text" asp-for="roleName">
+                <input type="submit" Value="Save" />
+            </form>
+            </td>
+        </tbody>
+        </table>
+
+    <table style="margin-left:23%","margin-top:20%" >
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>User Accounts</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach(var user in Model.users)
+            {
+                <tr>
+                    <td>"@user.Id"</td>
+                    <td>"@user.Email"</td>
+                    <td>
+                        <a class="btn btn-sm btn-danger order-button float-right" asp-page="/ManageUser"
+                       asp-route-id="@user.Id" asp-page-handler="DeleteHandler">Delete User</a>
+                    </td>
+                    <td>
+                        <form method="post" asp-page="/ManageUser" asp-page-handler="Update" asp-route-id="@user.Id">
+
+                            <input type="text" asp-for="PasswordString"   />
+                            <input type ="submit">
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        </table>
+
+  
+
+        
+
+           
+    </body>
+</html>
